@@ -28,10 +28,10 @@ test('o layout contém adaptação explícita para cabeçalho até 400px', () =>
 });
 
 test('contato permanece acessível no cabeçalho em larguras móveis', () => {
-  assert.match(html, /<nav[^>]*>[\\s\\S]*?Contato[\\s\\S]*?<\\/nav>/);
-  assert.match(styles, /@media\\s*\\(max-width:\\s*650px\\)[\\s\\S]*?\\.header\\s*\\{[^}]*flex-direction:\\s*column/);
-  assert.match(styles, /@media\\s*\\(max-width:\\s*650px\\)[\\s\\S]*?\\.header nav\\s*\\{[^}]*flex-wrap:\\s*wrap/);
-  assert.doesNotMatch(styles, /\\.header nav a:last-child\\s*\\{\\s*display:\\s*none\\s*\\}/);
+  assert.match(html, /<nav[^>]*>[\s\S]*?Contato[\s\S]*?<\/nav>/);
+  assert.match(styles, /@media\s*\(max-width:\s*650px\)[\s\S]*?\.header\s*\{[^}]*flex-direction:\s*column/);
+  assert.match(styles, /@media\s*\(max-width:\s*650px\)[\s\S]*?\.header nav\s*\{[^}]*flex-wrap:\s*wrap/);
+  assert.doesNotMatch(styles, /\.header nav a:last-child\s*\{\s*display:\s*none\s*\}/);
 });
 
 function mount() {

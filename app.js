@@ -1,4 +1,10 @@
 (() => {
+  const heroImage = document.querySelector('.hero-visual img');
+  if (heroImage) {
+    const hideFailedImage = () => { heroImage.hidden = true; };
+    heroImage.addEventListener('error', hideFailedImage);
+    if (heroImage.complete && heroImage.naturalWidth === 0) hideFailedImage();
+  }
   const filters = [...document.querySelectorAll('[data-filter]')];
   const projects = [...document.querySelectorAll('[data-categories]')];
   const status = document.querySelector('#filter-status');

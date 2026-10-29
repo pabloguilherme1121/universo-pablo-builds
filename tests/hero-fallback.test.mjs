@@ -9,6 +9,7 @@ function mount({ complete = false, naturalWidth = 10 } = {}) {
   const visual = { hidden: false };
   const image = {
     hidden: false,
+    parentElement: visual,
     complete,
     naturalWidth,
     events: {},

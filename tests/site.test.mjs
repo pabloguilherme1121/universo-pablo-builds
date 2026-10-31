@@ -97,3 +97,9 @@ test('imagem carregada não é ocultada indevidamente', () => {
   const { image } = mount();
   assert.equal(image.hidden, false);
 });
+
+test('link Contato do cabeçalho anuncia abertura em nova aba', () => {
+  const nav = html.match(/<nav aria-label="Navegação principal">([\s\S]*?)<\/nav>/)?.[1];
+  assert.ok(nav, 'Navegação principal deve existir');
+  assert.match(nav, /<a\b[^>]*target="_blank"[^>]*>Contato[\s\S]*?<span class="sr-only"> \(abre em nova aba\)<\/span><\/a>/);
+});

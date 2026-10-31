@@ -103,3 +103,8 @@ test('link Contato do cabeçalho anuncia abertura em nova aba', () => {
   assert.ok(nav, 'Navegação principal deve existir');
   assert.match(nav, /<a\b[^>]*target="_blank"[^>]*>Contato[\s\S]*?<span class="sr-only"> \(abre em nova aba\)<\/span><\/a>/);
 });
+
+
+test('links da navegação têm área de toque de 44px', () => {
+  assert.match(styles, /\.header nav a\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px[^}]*\}/);
+});

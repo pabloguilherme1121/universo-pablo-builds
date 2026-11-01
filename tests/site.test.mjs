@@ -97,3 +97,19 @@ test('imagem carregada não é ocultada indevidamente', () => {
   const { image } = mount();
   assert.equal(image.hidden, false);
 });
+
+test('link Contato do cabeçalho anuncia abertura em nova aba', () => {
+  const nav = html.match(/<nav aria-label="Navegação principal">([\s\S]*?)<\/nav>/)?.[1];
+  assert.ok(nav, 'Navegação principal deve existir');
+  assert.match(nav, /<a\b[^>]*target="_blank"[^>]*>Contato[\s\S]*?<span class="sr-only"> \(abre em nova aba\)<\/span><\/a>/);
+});
+
+
+test('links da navegação têm área de toque de 44px', () => {
+  assert.match(styles, /\.header nav a\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px[^}]*\}/);
+});
+
+test('filtros de projetos mantêm alvo de toque mínimo de 44px', () => {
+  assert.match(styles, /\.filter\s*\{[^}]*min-height:\s*44px(?:;|\})/);
+  assert.match(html, /<div class="filters" role="group" aria-label="Filtrar projetos">/);
+});

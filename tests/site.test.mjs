@@ -108,3 +108,8 @@ test('link Contato do cabeçalho anuncia abertura em nova aba', () => {
 test('links da navegação têm área de toque de 44px', () => {
   assert.match(styles, /\.header nav a\s*\{[^}]*display:\s*inline-flex;[^}]*align-items:\s*center;[^}]*min-height:\s*44px[^}]*\}/);
 });
+
+test('filtros de projetos mantêm alvo de toque mínimo de 44px', () => {
+  assert.match(styles, /\.filter\s*\{[^}]*min-height:\s*44px(?:;|\})/);
+  assert.match(html, /<div class="filters" role="group" aria-label="Filtrar projetos">/);
+});

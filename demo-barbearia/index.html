@@ -1,36 +1,78 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0b1316">
-<meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Demonstração de uma página comercial de barbearia com serviços e mensagem pré-preenchida para o WhatsApp, criada pela PG Tech.">
-<title>Barbearia Modelo | Demonstração PG Tech</title>
+<meta name="theme-color" content="#0d1410">
+<meta name="description" content="Demonstração de site comercial para barbearia, catálogo de serviços e agendamento pelo WhatsApp. Produzido pela PG Tech.">
+<title>Barbearia Exemplo | Demo PG Tech</title>
 <style>
-:root{color-scheme:dark;--bg:#0b1316;--panel:#142026;--line:#314148;--muted:#b3c1c4;--white:#f9faf7;--accent:#d4b480;--accent-dark:#101818}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
-a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid #e1c79e;outline-offset:4px}p{margin:0}.wrap{width:min(1070px,calc(100% - 40px));margin-inline:auto}
-.top{border-bottom:1px solid var(--line)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;letter-spacing:.12em;font-size:.98rem}.brand span{display:block;color:var(--accent);font-size:.65rem;font-weight:600;letter-spacing:.24em}.nav-link{font-size:.86rem;color:var(--accent);font-weight:750}
-.hero{padding:88px 0 80px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);align-items:center;gap:42px}.eyebrow{font-size:.71rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:750}.hero h1{font-size:clamp(2.75rem,5vw,5rem);line-height:1.03;letter-spacing:-.06em;margin:20px 0 22px;max-width:11ch}.hero h1 em{font-style:normal;color:var(--accent)}.hero-copy{color:var(--muted);font-size:1.05rem;max-width:520px}
-.buttons{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}.button{min-height:50px;display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:10px;font-weight:800;text-align:center}.primary{background:var(--accent);color:var(--accent-dark)}.secondary{border:1px solid var(--line);color:var(--white)}
-.preview{border:1px solid var(--line);border-radius:22px;padding:25px;background:linear-gradient(145deg,#1f3439,#101b20);box-shadow:0 24px 60px #0005}.preview small{font-size:.72rem;color:var(--accent);font-weight:700;letter-spacing:.14em}.preview .cut-icon{font-size:4.5rem;line-height:1.2;margin:20px 0;color:var(--accent);font-family:Georgia,serif}.preview h2{font-family:Georgia,serif;font-size:1.7rem;font-weight:500;margin:0 0 8px}.preview p{color:var(--muted);font-size:.9rem}.preview-meta{display:flex;justify-content:space-between;gap:10px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:.78rem;color:var(--accent)}
-.section{padding:66px 0 96px;border-top:1px solid var(--line)}.section h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:12px 0 10px;letter-spacing:-.04em}.hint{color:var(--muted);max-width:610px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}.service-card{display:flex;flex-direction:column;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px}.num{color:var(--accent);font-size:.75rem;letter-spacing:.12em;font-weight:750}.service-card h3{font-size:1.38rem;line-height:1.2;margin:20px 0 12px}.description{color:var(--muted);font-size:.89rem;flex:1}.price{font-size:1.85rem;letter-spacing:-.04em;font-weight:800;margin:18px 0}.wa-service{display:inline-flex;min-height:50px;align-items:center;justify-content:center;border:1px solid var(--accent);border-radius:10px;color:var(--accent);font-size:.91rem;font-weight:800;padding:12px;text-align:center}.wa-service:hover{background:var(--accent);color:var(--accent-dark)}
-.proof{border-top:1px solid var(--line);padding:26px 0 50px}.proof p{font-size:.89rem;color:var(--muted);max-width:820px}.proof strong{color:var(--white)}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-top:25px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}.foot a{color:var(--accent);font-weight:750}
-@media (max-width: 820px){.hero{grid-template-columns:1fr;padding:64px 0 58px}.preview{max-width:470px}.cards{grid-template-columns:1fr}.service-card{min-height:0}.description{flex:auto}}
-@media (max-width: 640px){.wrap{width:calc(100% - 32px)}.nav{min-height:66px}.brand{font-size:.86rem}.nav-link{font-size:.77rem}.hero{gap:26px;padding:46px 0 52px}.hero h1{font-size:clamp(2.55rem,12vw,3.8rem)}.hero-copy{font-size:.97rem}.buttons{margin-top:25px}.buttons .button{width:100%}.preview{padding:20px}.section{padding:48px 0 65px}.service-card{padding:24px}.foot{align-items:flex-start;flex-direction:column}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+:root { color-scheme:dark; --bg:#0d1410; --surface:#1b271e; --line:#3a4b3c; --text:#f7f7ed; --muted:#bfcaba; --green:#c9ec8b; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--text); background:var(--bg); font-family:system-ui,-apple-system,Segoe UI,sans-serif; line-height:1.5; }
+a { color:inherit; }
+a:focus-visible,input:focus-visible { outline:3px solid var(--green); outline-offset:4px; }
+.wrap { width:min(100% - 36px,1024px); margin:0 auto; }
+.skip { position:absolute; left:10px; top:-100px; z-index:9; background:var(--green); color:#152014; padding:10px; }
+.skip:focus { top:10px; }
+header { border-bottom:1px solid #ffffff18; }
+.nav { min-height:73px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.brand { display:flex; align-items:center; gap:12px; font-weight:850; font-size:1.02rem; text-decoration:none; }
+.pole { display:block; flex:none; width:35px; height:35px; border:2px solid #f4f2de; border-radius:9px; background:repeating-linear-gradient(135deg,#e7e5d7 0 9px,#af5248 9px 18px,#e7e5d7 18px 27px,#4c6b85 27px 36px); }
+.navlink { border:1px solid var(--line); padding:10px 12px; border-radius:10px; text-decoration:none; font-size:.88rem; font-weight:700; }
+.eyebrow { color:var(--green); text-transform:uppercase; font-size:.75rem; letter-spacing:.12em; font-weight:800; }
+.hero { display:grid; grid-template-columns:1.13fr .87fr; gap:36px; align-items:center; padding:75px 0 64px; }
+h1 { font-size:clamp(2.8rem,6.4vw,5.5rem); line-height:1.04; letter-spacing:-.065em; margin:15px 0 22px; }
+h1 em { color:var(--green); font-style:normal; }
+.intro { color:var(--muted); font-size:1.08rem; max-width:530px; margin:0 0 25px; }
+.cta { display:inline-flex; align-items:center; justify-content:center; min-height:50px; border-radius:12px; border:0; padding:12px 21px; background:var(--green); color:#122015; font-weight:850; text-decoration:none; }
+.cta:hover { filter:brightness(1.1); }
+.art { min-height:325px; border:1px solid var(--line); border-radius:25px; background:radial-gradient(circle at center,#5f794b66,transparent 54%),linear-gradient(140deg,#273a2b,#111a14); display:grid; place-items:center; position:relative; overflow:hidden; }
+.art:before { content:""; width:185px; height:185px; border:2px solid #c9ec8b; border-radius:50%; box-shadow:0 0 0 30px #c9ec8b10,0 0 0 75px #c9ec8b07; }
+.art strong { position:absolute; font:700 5rem Georgia,serif; letter-spacing:-.12em; margin-right:16px; }
+.art small { position:absolute; left:22px; bottom:17px; letter-spacing:.15em; font-size:.72rem; color:var(--muted); }
+h2 { margin:8px 0 10px; font-size:clamp(1.8rem,3vw,2.5rem); letter-spacing:-.035em; }
+.note { color:var(--muted); font-size:.93rem; margin:0 0 24px; }
+fieldset { border:0; margin:0; padding:0; min-width:0; }
+legend { font-size:1.2rem; font-weight:750; margin-bottom:16px; }
+.cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.card { display:block; cursor:pointer; background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:21px; min-height:195px; }
+.card:has(input:checked) { border-color:var(--green); background:#253629; }
+.card input { width:19px; height:19px; accent-color:var(--green); margin:0; }
+.card strong { display:block; margin-top:19px; font-size:1.22rem; }
+.card span { display:block; margin:4px 0 11px; color:var(--muted); font-size:.9rem; }
+.card b { display:block; font-size:1.55rem; color:var(--green); }
+.booking { margin-top:18px; padding:20px; border:1px solid var(--line); background:#142018; border-radius:18px; display:flex; flex-wrap:wrap; align-items:center; gap:20px; }
+.booking div { flex:1 1 250px; }
+.booking strong { display:block; }
+.booking p { font-size:.9rem; color:var(--muted); margin:5px 0 0; }
+main { padding-bottom:72px; }
+footer { border-top:1px solid var(--line); padding:25px 0 42px; color:var(--muted); font-size:.85rem; }
+footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; }
+@media(max-width:700px) { .hero { grid-template-columns:1fr; padding:40px 0 34px; gap:28px; } .art { min-height:190px; } .art:before { width:115px; height:115px; } .art strong { font-size:3.4rem; } .cards { grid-template-columns:1fr; } .card { min-height:0; padding:18px; } .card strong { margin-top:12px; } .booking .cta { width:100%; } }
+@media(max-width:360px) { .wrap { width:min(100% - 26px,1024px); } h1 { font-size:2.6rem; } .brand { font-size:.87rem; } .navlink { font-size:.78rem; padding:9px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
 <body>
-<header class="top"><div class="nav wrap"><a class="brand" href="#inicio" aria-label="Ir ao início">BARBEARIA MODELO<span>DEMONSTRAÇÃO PG TECH</span></a><a class="nav-link" href="#servicos">Ver serviços ↓</a></div></header>
-<main id="inicio"><section class="hero wrap" aria-labelledby="hero-title"><div><p class="eyebrow">Barbearia • Exemplo de site comercial</p><h1 id="hero-title">Seu estilo começa <em>aqui.</em></h1><p class="hero-copy">Veja os serviços, escolha o que precisa e abra uma mensagem pronta no WhatsApp. Um exemplo simples de como sua barbearia pode atender melhor pelo celular.</p><div class="buttons"><a class="button primary" href="#servicos">Escolher meu serviço ↓</a><a class="button secondary" href="https://www.instagram.com/pablo.builds.ia/" target="_blank" rel="noopener noreferrer">Conhecer a PG Tech ↗</a></div></div><aside class="preview" aria-label="Prévia da experiência"><small>01 / PRATICIDADE</small><div class="cut-icon" aria-hidden="true">✂</div><h2>Escolha, toque, converse.</h2><p>Sem criar conta. Sem instalar aplicativo. Uma mensagem pronta para começar o atendimento.</p><div class="preview-meta"><span>FEITO PARA CELULAR</span><span>DEMO</span></div></aside></section>
-<section class="section" id="servicos" aria-labelledby="services-title"><div class="wrap"><p class="eyebrow">Cardápio demonstrativo</p><h2 id="services-title">Escolha seu serviço.</h2><p class="hint">Valores ilustrativos. Clique para abrir o WhatsApp com a mensagem preparada. Este site não consulta agenda nem confirma horários.</p><div class="cards">
-<article class="service-card"><span class="num">01 / CORTE</span><h3>Corte masculino</h3><p class="description">Corte tradicional ou moderno, com acabamento.</p><p class="price">R$ 35</p><a class="wa-service" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20PG%20Tech%20e%20gostaria%20de%20conversar%20sobre%20corte%20masculino%20%28valor%20ilustrativo%3A%20R%24%2035%29.%20H%C3%A1%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener noreferrer" aria-label="Preparar mensagem sobre corte masculino no WhatsApp">Conversar sobre corte ↗</a></article>
-<article class="service-card"><span class="num">02 / BARBA</span><h3>Barba</h3><p class="description">Aparar, alinhar e finalizar a barba.</p><p class="price">R$ 25</p><a class="wa-service" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20PG%20Tech%20e%20gostaria%20de%20conversar%20sobre%20barba%20%28valor%20ilustrativo%3A%20R%24%2025%29.%20H%C3%A1%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener noreferrer" aria-label="Preparar mensagem sobre barba no WhatsApp">Conversar sobre barba ↗</a></article>
-<article class="service-card"><span class="num">03 / COMBO</span><h3>Corte + barba</h3><p class="description">Os dois cuidados na mesma visita.</p><p class="price">R$ 55</p><a class="wa-service" href="https://api.whatsapp.com/send?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20PG%20Tech%20e%20gostaria%20de%20conversar%20sobre%20corte%20%2B%20barba%20%28valor%20ilustrativo%3A%20R%24%2055%29.%20H%C3%A1%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener noreferrer" aria-label="Preparar mensagem sobre combo corte e barba no WhatsApp">Conversar sobre combo ↗</a></article>
-</div></div></section></main>
-<div class="proof wrap"><p><strong>Demonstração PG Tech.</strong> Barbearia Modelo não representa um estabelecimento real. Valores ilustrativos e serviços de exemplo. Nenhum agendamento é confirmado automaticamente. O WhatsApp abre com texto preenchido para você escolher o destinatário; numa versão contratada, o contato seria configurado para a barbearia.</p></div>
-<footer class="foot wrap"><span>© PG Tech • Demonstração comercial</span><a href="https://www.instagram.com/pablo.builds.ia/" target="_blank" rel="noopener noreferrer">@pablo.builds.ia ↗</a></footer>
+<a class="skip" href="#servicos">Pular para os serviços</a>
+<header><div class="wrap nav"><a class="brand" href="#"><span class="pole" aria-hidden="true"></span> BARBEARIA EXEMPLO</a><a class="navlink" href="#servicos">Ver serviços</a></div></header>
+<main>
+<section class="wrap hero" aria-labelledby="chamada">
+<div><span class="eyebrow">Demonstração PG Tech</span><h1 id="chamada">Seu estilo, <em>seu horário.</em></h1><p class="intro">Escolha um serviço e abra o WhatsApp com a mensagem de agendamento pronta. Sem instalar nada.</p><a href="#servicos" class="cta">Escolher serviço</a></div>
+<div class="art" role="img" aria-label="Monograma ilustrativo de barbearia"><strong aria-hidden="true">BE</strong><small aria-hidden="true">ESTILO • PRATICIDADE</small></div>
+</section>
+<section class="wrap" id="servicos" aria-labelledby="titulo"><span class="eyebrow">Catálogo simples</span><h2 id="titulo">Serviços e valores</h2><p class="note">Nome, preços e serviços fictícios. A página é uma demonstração comercial, não uma barbearia real.</p>
+<fieldset><legend>Escolha um serviço para testar o agendamento</legend><div class="cards">
+<label class="card"><input type="radio" name="servico" value="corte" checked><strong>Corte masculino</strong><span>Corte e finalização</span><b>R$ 35</b></label>
+<label class="card"><input type="radio" name="servico" value="barba"><strong>Barba</strong><span>Aparar e desenhar</span><b>R$ 25</b></label>
+<label class="card"><input type="radio" name="servico" value="combo"><strong>Corte + barba</strong><span>Pacote completo</span><b>R$ 55</b></label>
+</div></fieldset>
+<div class="booking"><div><strong>Agendamento direto pelo WhatsApp</strong><p id="wa-status" aria-live="polite">Demo: selecione o destinatário no WhatsApp.</p></div><a class="cta" id="agendar" href="https://wa.me/?text=Ol%C3%A1%21" rel="noopener noreferrer" target="_blank">Testar no WhatsApp ↗</a></div>
+</section>
+</main>
+<footer><div class="wrap"><span>Exemplo fictício para apresentar o serviço da PG Tech.</span><a href="https://lnk.bio/PGTECH" target="_blank" rel="noopener noreferrer">Feito pela PG Tech</a></div></footer>
+<script type="module" src="./demo.js"></script>
 </body>
 </html>

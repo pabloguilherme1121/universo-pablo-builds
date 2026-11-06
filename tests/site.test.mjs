@@ -97,3 +97,13 @@ test('imagem carregada não é ocultada indevidamente', () => {
   const { image } = mount();
   assert.equal(image.hidden, false);
 });
+
+test('hero usa WebP mais leve sem perder imagem original e reserva proporção', async () => {
+  const original = await readFile(new URL('capa.png', root));
+  const optimized = await readFile(new URL('capa.webp', root));
+  assert.equal(optimized.toString('ascii', 0, 4), 'RIFF');
+  assert.equal(optimized.toString('ascii', 8, 12), 'WEBP');
+  assert.ok(optimized.length < original.length * 0.6,
+    'imagem hero deve reduzir pelo menos 40% dos bytes');
+  assert.match(html, /<img[^>]+src="capa\.webp"[^>]+width="1672"[^>]+height="941"[^>]*>/);
+});

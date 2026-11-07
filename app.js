@@ -1,7 +1,10 @@
 (() => {
   const heroImage = document.querySelector('.hero-visual img');
   if (heroImage) {
-    const hideFailedImage = () => { heroImage.hidden = true; };
+    const hideFailedImage = () => {
+      heroImage.hidden = true;
+      if (heroImage.parentElement) heroImage.parentElement.hidden = true;
+    };
     heroImage.addEventListener('error', hideFailedImage);
     if (heroImage.complete && heroImage.naturalWidth === 0) hideFailedImage();
   }
